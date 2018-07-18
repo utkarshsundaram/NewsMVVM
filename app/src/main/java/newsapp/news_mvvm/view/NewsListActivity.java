@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.databinding.Observable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import java.util.Observer;
 
@@ -26,6 +27,9 @@ private NewsListViewModel mNewsListModel;
 
     private void setupListPeopleView(RecyclerView listNews)
     {
+        NewsAdapter adapter = new NewsAdapter();
+        listNews.setAdapter(adapter);
+        listNews.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void initDataBinding()
@@ -42,9 +46,9 @@ private NewsListViewModel mNewsListModel;
     public void update(java.util.Observable observable, Object o) {
         if (observable instanceof NewsListViewModel)
         {
-            NewsAdapter peopleAdapter = (NewsAdapter) newsListBinding.listNews.getAdapter();
+            NewsAdapter newsAdapter = (NewsAdapter) newsListBinding.listNews.getAdapter();
             NewsListViewModel peopleViewModel = (NewsListViewModel) observable;
-            peopleAdapter.setPeopleList(peopleViewModel.getNewsList());
+            newsAdapter.setPeopleList(peopleViewModel.getNewsList());
         }
     }
 }

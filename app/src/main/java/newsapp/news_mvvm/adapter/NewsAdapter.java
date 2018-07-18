@@ -52,7 +52,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsAdapterVie
         RecyclerNewsHeadlinesBinding mItemPeopleBinding;
 
         public NewsAdapterViewHolder(RecyclerNewsHeadlinesBinding itemPeopleBinding) {
-            super(itemPeopleBinding.cardView);
+            super(itemPeopleBinding.itemNews);
             this.mItemPeopleBinding = itemPeopleBinding;
         }
 
