@@ -4,9 +4,7 @@ import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-
+import com.squareup.picasso.Picasso;
 import java.util.Observable;
 
 import newsapp.news_mvvm.model.ArticlesModelData;
@@ -35,5 +33,12 @@ public class NewsDetailViewModel extends BaseObservable
     public String getDescription(){
         return data.getDescription();
     }
+    public String getHeadlineImage() {
+        return data.getUrlToImage();
+    }
 
+    @BindingAdapter("imageUrl") public static void setImageUrl(ImageView imageView, String url) {
+        //.with(imageView.getContext()).load(url).into(imageView);
+        Picasso.get().load(url).resize(50,50).into(imageView);
+    }
 }
