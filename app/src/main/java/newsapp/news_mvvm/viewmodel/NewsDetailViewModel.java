@@ -23,22 +23,26 @@ public class NewsDetailViewModel extends BaseObservable
         this.data = data;
         this.mContext = mContext;
     }
+
+    @BindingAdapter("imageUrl")
+    public static void setImageUrl(ImageView imageView, String url) {
+        Picasso.get().load(url).resize(50, 50).into(imageView);
+    }
+
     public void setHeadline(ArticlesModelData data) {
         this.data = data;
         notifyChange();
     }
+
     public String getTitle() {
        return data.getTitle();
     }
+
     public String getDescription(){
         return data.getDescription();
     }
+
     public String getHeadlineImage() {
         return data.getUrlToImage();
-    }
-
-    @BindingAdapter("imageUrl") public static void setImageUrl(ImageView imageView, String url) {
-        //.with(imageView.getContext()).load(url).into(imageView);
-        Picasso.get().load(url).resize(50,50).into(imageView);
     }
 }

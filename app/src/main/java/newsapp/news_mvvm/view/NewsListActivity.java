@@ -1,7 +1,6 @@
 package newsapp.news_mvvm.view;
 
 import android.databinding.DataBindingUtil;
-import android.databinding.Observable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,7 +10,6 @@ import java.util.Observer;
 import newsapp.news_mvvm.R;
 import newsapp.news_mvvm.adapter.NewsAdapter;
 import newsapp.news_mvvm.databinding.ActivityNewsListBinding;
-import newsapp.news_mvvm.model.HeadlineModelData;
 import newsapp.news_mvvm.viewmodel.NewsListViewModel;
 
 public class NewsListActivity extends AppCompatActivity implements Observer {
