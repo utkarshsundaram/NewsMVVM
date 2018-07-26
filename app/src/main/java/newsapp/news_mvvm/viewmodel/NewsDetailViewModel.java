@@ -3,12 +3,14 @@ package newsapp.news_mvvm.viewmodel;
 import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.BindingAdapter;
+import android.view.View;
 import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 import java.util.Observable;
 
 import newsapp.news_mvvm.model.ArticlesModelData;
 import newsapp.news_mvvm.model.HeadlineModelData;
+import newsapp.news_mvvm.view.NewsDetailsActivity;
 
 /**
  * Created by user on 18/7/18.
@@ -44,5 +46,9 @@ public class NewsDetailViewModel extends BaseObservable
 
     public String getHeadlineImage() {
         return data.getUrlToImage();
+    }
+
+    public void onItemClick(View view) {
+        mContext.startActivity(NewsDetailsActivity.launchDetail(view.getContext(), data.getUrl()));
     }
 }

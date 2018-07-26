@@ -12,7 +12,6 @@ import java.util.List;
 import newsapp.news_mvvm.R;
 import newsapp.news_mvvm.databinding.RecyclerNewsHeadlinesBinding;
 import newsapp.news_mvvm.model.ArticlesModelData;
-import newsapp.news_mvvm.model.HeadlineModelData;
 import newsapp.news_mvvm.viewmodel.NewsDetailViewModel;
 
 /**

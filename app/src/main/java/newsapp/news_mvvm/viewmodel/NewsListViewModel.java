@@ -19,6 +19,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
+ *
  * Created by user on 18/7/18.
  */
 
@@ -32,7 +33,7 @@ public class NewsListViewModel extends Observable
     public NewsListViewModel(@NonNull Context context) {
         mContext = context;
         this.newsList = new ArrayList<>();
-        peopleProgress = new ObservableInt(View.GONE);
+        peopleProgress = new ObservableInt(View.VISIBLE);
         peopleRecycler = new ObservableInt(View.GONE);
         initData();
 

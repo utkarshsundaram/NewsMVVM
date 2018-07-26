@@ -10,9 +10,9 @@
     </data>
 <LinearLayout
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@color/black"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
     >
     <ImageView
         android:layout_width="match_parent"
@@ -21,11 +21,11 @@
         android:background="@color/yellow"
         android:src="@drawable/bbcsport" />
     <ProgressBar
-        android:id="@+id/progress_people"
+        android:id="@+id/progress_news"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
         android:layout_gravity="center"
+        android:layout_weight="0.5"
         app:visibility="@{mainViewModel.peopleProgress}"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_news"
@@ -33,7 +33,7 @@
         android:layout_height="0dp"
         android:layout_weight="9"
         android:background="@color/black"
-        tools:listitem="@layout/recycler_news_headlines"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recycler_news_headlines" />
 </LinearLayout>
 </layout>
