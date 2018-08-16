@@ -18,3 +18,5 @@ Two-way Data Binding is a technique of binding your objects to your XML layouts 
 In our case, the ViewModel can send data to the layout and also observe changes.
 For this, we need a BindingAdapter and custom attribute defined in the XML.
 The Binding Adapter would listen to changes in the attribute property.
+
+![android-mvvm-pattern](https://user-images.githubusercontent.com/26081164/44203718-a239bc00-a16d-11e8-9a06-993a601a88cd.png)
